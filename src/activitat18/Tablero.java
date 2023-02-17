@@ -11,10 +11,6 @@ class Tablero {
         vaciar();
     }
 
-    public Tablero(EstadoCasilla[][] casillas) {
-        this.casillas = casillas;
-    }
-
     public void mostrar() {
 
         System.out.println();
