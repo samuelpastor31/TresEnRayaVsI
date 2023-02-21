@@ -19,11 +19,11 @@ class TresEnRaya {
     public void jugar(){
         do {
             tablero.vaciar();
-            comenzarPartida();
+            comenzarPartida(0);
         } while (seConfirmaNuevaPartida());
     }
 
-    private void comenzarPartida() {
+    private void comenzarPartida(int modoJuego) {
         System.out.println("Vamos a jugar al \"Tres en Raya\"");
         int turno = new Random().nextInt(2);
         do {
