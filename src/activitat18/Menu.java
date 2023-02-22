@@ -33,38 +33,41 @@ public class Menu {
     }
 
     public static void menu(){
-        int menu = sacarMenu("Seleccione una opción:");
 
+        do {
+            int menu = sacarMenu("Seleccione una opción:");
 
-        switch (menu){
-            case 1:
-            JugadorManual jugador1 = new JugadorManual(EstadoCasilla.FICHA_O);
-            JugadorPC jugador2 = new JugadorPC(EstadoCasilla.FICHA_X);
-            Partida partida = new Partida(jugador1, jugador2);
-            partida.jugar();
-            break;
+            switch (menu){
+                case 1:
+                    JugadorManual jugador1 = new JugadorManual(EstadoCasilla.FICHA_O);
+                    JugadorPC jugador2 = new JugadorPC(EstadoCasilla.FICHA_X);
+                    Partida partida = new Partida(jugador1, jugador2);
+                    partida.jugar();
+                    break;
 
-            case 2:
-            JugadorManual jugador3 = new JugadorManual(EstadoCasilla.FICHA_O);
-            JugadorManual jugador4 = new JugadorManual(EstadoCasilla.FICHA_X);
-            Partida partida2 = new Partida(jugador3, jugador4);
-            partida2.jugar();
-            break;
+                case 2:
+                    JugadorManual jugador3 = new JugadorManual(EstadoCasilla.FICHA_O);
+                    JugadorManual jugador4 = new JugadorManual(EstadoCasilla.FICHA_X);
+                    Partida partida2 = new Partida(jugador3, jugador4);
+                    partida2.jugar();
+                    break;
 
-            case 3:
-            JugadorPC jugador5 = new JugadorPC(EstadoCasilla.FICHA_O);
-            JugadorPC jugador6 = new JugadorPC(EstadoCasilla.FICHA_X);
-            Partida partida3 = new Partida(jugador5, jugador6);
-            partida3.jugar();
-            break;
+                case 3:
+                    JugadorPC jugador5 = new JugadorPC(EstadoCasilla.FICHA_O);
+                    JugadorPC jugador6 = new JugadorPC(EstadoCasilla.FICHA_X);
+                    Partida partida3 = new Partida(jugador5, jugador6);
+                    partida3.jugar();
+                    break;
 
-            case 4:
-                System.out.println("Adiós");
-                break;
+                case 4:
+                    System.out.println("Adiós");
+                    return;
 
-            default:
-                System.out.println("¡Error! La opción seleccionada no es válida");
+                default:
+                    System.out.println("¡Error! La opción seleccionada no es válida");
 
-        }
+            }
+        }while (true);
+
     }
 }

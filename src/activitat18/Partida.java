@@ -28,12 +28,11 @@ public class Partida {
         tablero = new Tablero();
     }
 
-    public void jugar(){
-        do {
-            tablero.vaciar();
-            comenzarPartida();
-        } while (seConfirmaNuevaPartida());
+    public void jugar() {
+        tablero.vaciar();
+        comenzarPartida();
     }
+
 
     private void comenzarPartida() {
         System.out.println("Vamos a jugar al \"Tres en Raya\"");
@@ -51,8 +50,5 @@ public class Partida {
             turno = (turno + 1) % 2;
         } while (true);
         tablero.mostrar();
-    }
-    public boolean seConfirmaNuevaPartida() {
-        return GestorIO.confirmar("¿Quieres volver a jugar?");
     }
 }

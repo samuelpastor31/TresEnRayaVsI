@@ -16,6 +16,8 @@ class TresEnRaya {
 
     public static void main(String[] args) {
         scanner = new Scanner(System.in);
-        Menu.menu();
+            Menu.menu();
+
+
     }
 }
