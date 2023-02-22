@@ -63,9 +63,6 @@ public class Menu {
                     System.out.println("Adiós");
                     return;
 
-                default:
-                    System.out.println("¡Error! La opción seleccionada no es válida");
-
             }
         }while (true);
 
