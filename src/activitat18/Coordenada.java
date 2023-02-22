@@ -18,10 +18,12 @@ class Coordenada {
         return columna;
     }
 
-    public boolean isValida(int dimension) {
-        return this.fila >= 1
-                && this.fila <= dimension
-                && this.columna >= 1
-                && this.columna <= dimension;
+    public boolean isValida(int dimension){
+        if ((this.fila>=0&&this.fila<=dimension)&&(this.columna>=0&&this.columna<=dimension)){
+            return true;
+        }else{
+            return false;
+        }
+
     }
 }

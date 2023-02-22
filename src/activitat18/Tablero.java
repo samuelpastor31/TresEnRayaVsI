@@ -33,12 +33,12 @@ class Tablero {
 
     public boolean isOcupada(Coordenada coordenada) {
         assert coordenada != null;
-        return casillas[coordenada.getFila()-1][coordenada.getColumna()-1] != EstadoCasilla.VACIO;
+        return casillas[coordenada.getFila()][coordenada.getColumna()] != EstadoCasilla.VACIO;
     }
 
     public void ponerFicha(Coordenada coordenada, EstadoCasilla ficha) {
         assert coordenada != null;
-        casillas[coordenada.getFila()-1][coordenada.getColumna()-1] = ficha;
+        casillas[coordenada.getFila()][coordenada.getColumna()] = ficha;
     }
 
     private void imprimirDivisionTabla() {
